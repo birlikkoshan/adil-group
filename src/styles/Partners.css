@@ -1,0 +1,88 @@
+.partners {
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.partners-title {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: #1f2937;
+}
+
+.logos-wrapper {
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.partner-logo {
+  height: 40px;
+  max-width: 100px;
+  width: auto;
+  opacity: 0.75;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  flex-shrink: 0;
+}
+
+.logos-track {
+  display: flex;
+  gap: 4rem;
+  animation: scroll 25s linear infinite;
+  width: fit-content;
+}
+
+@media (max-width: 768px) {
+  .partner-logo {
+    height: 28px;
+    max-width: 70px;
+  }
+
+  .logos-track {
+    gap: 2rem;
+    animation: scroll 20s linear infinite;
+  }
+
+  .fade-left,
+  .fade-right {
+    width: 40px;
+  }
+
+  .partners-title {
+    font-size: 1.25rem;
+  }
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.fade-left,
+.fade-right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.fade-left {
+  left: 0;
+  background: linear-gradient(to right, white 0%, transparent 100%);
+}
+
+.fade-right {
+  right: 0;
+  background: linear-gradient(to left, white 0%, transparent 100%);
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
