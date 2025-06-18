@@ -1,13 +1,10 @@
 import React from 'react';
-import { Hero } from '../components/Hero';
-import { About } from '../components/About';
-import { Partners } from '../components/Partners';
-import { ContactForm } from '../components/ContactForm';
-import { Footer } from '../components/Footer';
-import { Navbar } from '../components/Navbar';
+import { Hero, TopNav, About, Partners, ContactForm, Footer, Navbar  } from '../components';
 
-export const Home: React.FC = () => (
+export const Home: React.FC = () => {
+  return (
   <div className="main">
+    <TopNav />    
     <Navbar />
     <Hero />
     <About />
@@ -15,4 +12,5 @@ export const Home: React.FC = () => (
     <ContactForm />
     <Footer />
   </div>
-);
+  ) 
+};

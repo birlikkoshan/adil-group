@@ -1,6 +1,6 @@
 // src/components/Navbar.tsx
 import React, { useState } from 'react';
-import '../App.css';
+
 import { Link } from 'react-router-dom';
 
 const navItems = [
@@ -9,9 +9,6 @@ const navItems = [
   { path: '/delivery', label: 'Доставка и оплата' },
   { path: '/faq', label: 'FAQ' },
   { path: '/blog', label: 'Блог' },
-  { path: '/partnership', label: 'Сотрудничество' },
-  { path: '/reviews', label: 'Отзывы' },
-  { path: '/careers', label: 'Карьера' }
 ];
 
 export const Navbar: React.FC = () => {
@@ -31,7 +28,7 @@ export const Navbar: React.FC = () => {
 
   return (
     <nav className="navbar">
-      <Link to='/' className="logo">ADIL GROUP</Link>
+      {/* <Link to='/' className="logo"></Link> */}
 
       <div className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
         <span></span>
@@ -46,6 +43,11 @@ export const Navbar: React.FC = () => {
           </li>
         ))}
       </ul>
+      
+      <div className="search-bar">
+        <input type="text" placeholder="Поиск..." />
+        <button type="submit">🔍</button>
+      </div>
 
       <div className={`mobile-nav ${isOpen ? 'open' : ''}`} >
         {navItems.map((item) => (

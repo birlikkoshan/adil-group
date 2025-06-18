@@ -2,6 +2,12 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Home } from './pages/Home';
 import { Error } from './pages/Error';
+import './App.css';
+import './styles/Footer.css';
+import './styles/Header.css';
+import './styles/Partners.css';
+
+
 
 const navItems = [
   { path: '/products', label: 'Продукция' },
